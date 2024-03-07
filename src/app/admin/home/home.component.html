@@ -1,0 +1,70 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+ 
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li class="mx-4"><span ><span class="glyphicon glyphicon-th" aria-hidden="true"></span > Home</span></li>
+        
+      </ul>
+      <ul class="nav navbar-nav">
+        <li class="mx-4" routerLink="/adminModule/addBook" ><span>Add Book</span></li>
+        <!-- (click)="addBook()" -->
+     </ul>
+     <ul class="nav navbar-nav">
+        <li class="mx-4" routerLink="/adminModule/userList"><span>User Lists</span></li>
+       
+     </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+     
+         <li class="dropdown">
+          <span class="mx-3" routerLink="/adminModule/adminSettings" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Admin Settings<span class="caret"></span></span>
+           <span class="mx-2" (click)="logout()">Logout</span>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div>
+    <table class="table">
+        <thead class="thead-dark my-2">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Book Name</th>
+            <th scope="col">Auther</th>
+            <th scope="col">Book Price</th>
+            <th scope="col">Category</th>
+            <th scope="col">Summary</th>
+            <th scope="col">Action</th>
+           </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of BookDetails" >
+             <th scope="row">{{data.id}}</th> 
+              <td>{{data.bookName}}</td>
+              <td>{{data.auther}}</td>
+              <td>{{data.price}}</td>
+              <td>{{data.category}}</td>
+              <td>{{data.summary}}</td>
+              
+              
+            
+               
+                <td><i class="fa fa-edit" (click)="edit(data.id)" style="font-size:24px;color:rgb(243, 220, 18)"></i>
+                   
+                  <mat-icon style="font-size:24px;color:rgb(216, 20, 20)" (click)="delete(data.id)" >delete</mat-icon></td>
+             
+            </tr>
+           
+           
+          </tbody>
+        </table>
+       
+</div>

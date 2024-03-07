@@ -1,0 +1,80 @@
+
+<div class="container">
+
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Create Account</h4>
+  
+    <br>
+	<br>
+   
+	<form [formGroup]="registerForm">
+	<div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="Full name" type="text" formControlName="fname">
+    </div>
+	<span *ngIf="this.registerForm.get('fname')?.errors?.['required'] && this.registerForm.get('fname')?.touched " class="err">Full Name is Required * </span>
+
+	<!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="Email address" type="email" formControlName="email" >
+    </div> 
+	<span *ngIf="this.registerForm.get('email')?.errors?.['required'] && this.registerForm.get('email')?.touched " class="err">Email is Required * </span>
+	<!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+		</div>
+		<select class="custom-select" style="max-width: 120px;">
+		    <option selected="">+91</option>
+		    <option value="1">+11</option>
+		    <option value="2">+05</option>
+		    <option value="3">+02</option>
+		</select>
+    	<input name="" class="form-control" placeholder="Phone number" type="text" formControlName="contact" >
+    </div> 
+	<span *ngIf="this.registerForm.get('contact')?.errors?.['required'] && this.registerForm.get('contact')?.touched " class="err">Contact is Required * </span>
+
+	<!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+		</div>
+		<select class="form-control" formControlName="own">
+			<option selected=""> Select </option>
+			<option>User</option>
+			<option>Admin</option>
+			
+		</select>
+	</div> 
+	<span *ngIf="this.registerForm.get('own')?.errors?.['required'] && this.registerForm.get('own')?.touched " class="err">Field is  Required * </span>
+
+	<!-- form-group end.// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+        <input class="form-control" placeholder="Create password" type="password" formControlName="password">
+    </div> <!-- form-group// -->
+   <!-- form-group// --> 
+   <span *ngIf="this.registerForm.get('password')?.errors?.['required'] && this.registerForm.get('password')?.touched " class="err">password is Required * </span> 
+   <span *ngIf="failData" class="err">All Fields Are Manditory *</span>                                    
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block"  (click)="submit()" > Create Account  </button>
+    </div> <!-- form-group// -->      
+    <p class="text-center" routerLink="/" >Have an account? <span >Log In</span> </p>                                                                 
+</form>
+
+
+</article>
+</div> <!-- card.// -->
+
+</div> 
+<!--container end.//-->
+
+<br><br>

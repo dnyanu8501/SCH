@@ -1,0 +1,30 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"></script>
+<div class="wrapper">
+    <form [formGroup]="addBookForm" class="border" >
+        
+        <div id="wizard">
+            <button routerLink="/adminModule" class="backBtn"> Back</button>
+            <h4>Add Book</h4>
+            <section>
+                <div class="form-row"> <input type="text" class="form-control" placeholder="Book Name" formControlName="bookName" > </div>
+                <div class="form-row"> <input type="text" class="form-control" placeholder="Author" formControlName="auther" > </div>
+                <div class="form-row"> <input type="text" class="form-control" placeholder="Book price" formControlName="price" > </div>
+                <div class="form-row"> <input type="text" class="form-control" placeholder="Category" formControlName="category" > </div>
+            </section> 
+            <h4></h4>
+            <section>
+                <div class="form-row" style="margin-bottom: 18px"> <textarea name="" id="" class="form-control" formControlName="summary" placeholder="Write a summary of Book" style="height: 108px"></textarea> </div>
+            <button class="btn" *ngIf="submitBtn" (click)="addBook()" >ADD BOOK</button>
+            <button class="btn mx-3 my-3" *ngIf="!submitBtn" (click)="update()" mat-raised-button color="warn">UPDATE</button>
+            <br><br>
+           
+            </section> 
+        </div>
+    </form>
+</div>
+ <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="60" r="62.1" />
+                <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 " />
+            </svg>
+            <p class="success">Order placed successfully. Your order will be dispacted soon. meanwhile you can track your order in my order section.</p> -->
+      

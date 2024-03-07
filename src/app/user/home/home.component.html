@@ -1,0 +1,28 @@
+
+
+<ul>
+    <li><span href="#home">Home</span></li>
+    <li><span routerLink="/userModule/borrowedPage" >Borrow Lists</span></li>
+  
+  
+<li  style="float:right" (click)="logout()" ><span ><span class="glyphicon glyphicon-log-in"></span> Logout</span></li>
+<li  style="float:right"  routerLink="/userModule/userSettings" ><span><span   class="glyphicon glyphicon-user"></span> User Settings</span></li>
+  </ul>
+
+<br>
+  <div class="container">
+    
+      <div class="gallery bg-dark text-white p-3 mx-2 my-3 " *ngFor="let data of BookDetails">
+        <h3 class="card-title">{{data.bookName}}</h3>
+        <p><b>Auther :</b>{{data.auther}}</p>
+        <p><b>Price :</b>{{data.price}}</p>
+        <div>
+          <p class="card-text" >{{data.summary}}</p>
+        </div>
+       
+        <button class="btn btn-primary" (click)="borrowBook(data.id)">Borrow Book</button>
+      </div>
+      
+  
+
+</div>

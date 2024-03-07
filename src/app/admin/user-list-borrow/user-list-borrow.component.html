@@ -1,0 +1,16 @@
+<div class="container">
+    <br>
+<button routerLink="/userModule" class="bg-dark text-light rounded-pill my-4">back</button>
+<div class="container">
+    
+    <div class="gallery bg-dark text-white p-3 mx-2 my-3 " *ngFor="let data of borrowedpageData">
+      <h3 class="card-title">{{data.bookName}}</h3>
+      <p><b>Auther :</b>{{data.auther}}</p>
+      <p><b>Price :</b>{{data.price}}</p>
+      <p class="card-text" >Title : {{data.summary}}</p>
+      <p>User : {{userName}}</p>
+      
+      
+    </div>
+</div>
+</div>

@@ -1,0 +1,70 @@
+{
+  "allMember": [
+    {
+      "fname": "dnyaneshwar",
+      "email": "user@gmail.com",
+      "contact": "8878278171",
+      "own": "User",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "fname": "ram Janakar",
+      "email": "admin",
+      "contact": "1234567890",
+      "own": "Admin",
+      "password": "1111",
+      "id": 2
+    }
+  ],
+  "addBook": [
+    {
+      "bookName": "Fear Not Be Strong",
+      "auther": "Vivekanand",
+      "price": "1120",
+      "category": "fearlessness",
+      "summary": "trength and fearlessness are the two prime virtues which are the markers of the health of a human being and society",
+      "id": 1
+    },
+    {
+      "bookName": "The Great Gatsby",
+      "auther": "F. Scott Fitzgerald",
+      "price": "789",
+      "category": "all",
+      "summary": "he Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. Set in the Jazz Age on Long Island, near New York City,",
+      "id": 2
+    },
+    {
+      "bookName": "I Feel Bad About My Neck",
+      "auther": "Nora Ephron",
+      "price": "970",
+      "category": "Motivations",
+      "summary": "Nora Ephron has mastered the art of seeming likeable - a rarer facility than one might think",
+      "id": 3
+    },
+    {
+      "bookName": "Lord of the Flies",
+      "auther": "William Golding",
+      "price": "1200",
+      "category": "Life",
+      "summary": "At the dawn of the next world war, a plane crashes on an uncharted island, stranding a group of schoolboys. ",
+      "id": 4
+    },
+    {
+      "bookName": "The Grapes of Wrath",
+      "auther": "John Steinbeck",
+      "price": "2030",
+      "category": "Science",
+      "summary": "The Grapes of Wrath is a landmark of American literature. A portrait of the conflict between the powerful and the powerless.",
+      "id": 5
+    },
+    {
+      "bookName": "Possession",
+      "auther": "A.S. Byatt",
+      "price": "1109",
+      "category": "history",
+      "summary": "Winner of England's Booker Prize and the literary sensation of the year, Possession is an exhilarating novel of wit and romance, at once an intellectual mystery and a triumphant love story.",
+      "id": 6
+    }
+  ]
+}

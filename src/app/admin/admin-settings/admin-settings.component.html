@@ -1,0 +1,75 @@
+
+<div class="container">
+
+    <div class="card bg-light">
+        
+    <article class="card-body mx-auto" style="max-width: 400px;">
+        <button routerLink="/adminModule/" class="bg-dark text-light rounded-pill">back</button>
+        <h4 class="card-title mt-3 text-center">Edit My Account</h4>
+        <!-- <input class="radioBtn mx-3" type="radio" (onChange)="formChangelayout()" value="user">User -->
+         <!-- <input class="radioBtn mx-3" type="radio" name="1" (onchange)="formChangelayout('admin')" value="admin" >Admin -->
+       
+        <br>
+        <br>
+       
+        <form [formGroup]="registerForm">
+         
+        <div class="form-group input-group">
+           
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+             </div>
+            <input name="" class="form-control" placeholder="Full name" type="text" formControlName="fname">
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+             </div>
+            <input name="" class="form-control" placeholder="Email address" type="email" formControlName="email" >
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+            </div>
+            <select class="custom-select" style="max-width: 120px;">
+                <option selected="">+91</option>
+                <option value="1">+11</option>
+                <option value="2">+05</option>
+                <option value="3">+02</option>
+            </select>
+            <input name="" class="form-control" placeholder="Phone number" type="text" formControlName="contact" >
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+            </div>
+            <select class="form-control" formControlName="own">
+                <option selected=""> Select </option>
+                <option>User</option>
+                <option>Admin</option>
+                
+            </select>
+        </div> <!-- form-group end.// -->
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+            </div>
+            <input class="form-control" placeholder="Create password" type="password" formControlName="password">
+        </div> <!-- form-group// -->
+       <!-- form-group// -->                                      
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block" (click)="edit()" > Edit Account  </button>
+        </div> <!-- form-group// -->      
+                                                                  
+    </form>
+    
+    
+    </article>
+    </div> <!-- card.// -->
+    
+    </div> 
+    <!--container end.//-->
+    
+    <br><br>
+    
+

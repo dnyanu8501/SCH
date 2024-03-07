@@ -1,0 +1,17 @@
+<div class="demo1  text-center">
+  <h2>Borrow Book Lists</h2>
+  <button routerLink="/userModule" class="bg-dark text-light rounded-pill float-right mx-5 ">back</button>
+</div>
+
+
+
+<div class="container">
+    
+    <div class="gallery bg-dark text-white p-3 mx-2 my-4 " *ngFor="let data of borrowedpageData">
+      <h3 class="card-title">{{data.bookName}}</h3>
+      <p><b>Auther :</b>{{data.auther}}</p>
+      <p><b>Price :</b>{{data.price}}</p>
+      <p class="card-text" >{{data.summary}}</p>
+      <button class="btn btn-primary" (click)="returnBook(data.id)" >Return Book</button>
+    </div>
+</div>
