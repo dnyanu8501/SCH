@@ -56,5 +56,11 @@ this.apiCallService.postApiCall('addBook',this.addBookForm.value).subscribe(res=
     
     })
   }
+  ngOnDestroy(){
+    
+  this.apiCallService.editData=[]
+    this.apiCallService.id=''
+
+  }
 
 }
